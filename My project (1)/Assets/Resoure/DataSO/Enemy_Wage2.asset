@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3231780d03fdf9b42a7ba79f3bc9298b, type: 3}
+  m_Name: Enemy_Wage2
+  m_EditorClassIdentifier: 
+  goPrefabs: {fileID: 6218566947718318041, guid: 67819c3264d0fde4b80938a6d2613bce, type: 3}
+  number: 5
+  path: {fileID: 3262122161165119029, guid: 58de1b3053b2a5e46851a01df7c5e37b, type: 3}
+  speed: 5
+  delaySpawn: 0.5
+  delayNew: 1
