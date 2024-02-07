@@ -8,7 +8,11 @@ public class Shooter : MonoBehaviour
     [SerializeField] GameObject bulletPre;
     [SerializeField] Transform poSpawn;
     int type = 0;
-    public bool isFiring;
+
+    [SerializeField] bool isAI;
+    [SerializeField] float deltaDelay = 0.5f;
+
+    [HideInInspector] public bool isFiring;
 
     Coroutine coroutine;
     // Start is called before the first frame update
@@ -55,7 +59,16 @@ public class Shooter : MonoBehaviour
                 stop = true;
                 Debug.Log("Not find BulletController");
             }
+            if (isAI)
+                delay = Ran(delay);
             yield return new WaitForSeconds(delay);
         }
+    }
+
+    float Ran(float value)
+    {
+        float result = Random.Range(value - deltaDelay, value + deltaDelay);
+        result = Mathf.Clamp(result, 0.5f, float.MaxValue);
+        return result;
     }
 }

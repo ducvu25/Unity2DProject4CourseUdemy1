@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24423f919e8f51145b1d48925aa51678, type: 3}
-  m_Name: Bullets_Bullet
+  m_Name: Enemies_Bullets_Bullet
   m_EditorClassIdentifier: 
   timeSpawn: 0.25
   timeALive: 5
