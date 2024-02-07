@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24423f919e8f51145b1d48925aa51678, type: 3}
   m_Name: Enemies_Bullets_Bullet
   m_EditorClassIdentifier: 
-  timeSpawn: 0.25
+  timeSpawn: 1
   timeALive: 5
   dame: 10
-  speed: {x: 0, y: 5}
+  speed: {x: 0, y: -5}

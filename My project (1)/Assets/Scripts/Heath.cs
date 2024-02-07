@@ -11,11 +11,15 @@ public class Heath : MonoBehaviour
     {
         hp = hpMax;
     }
-    public void AddDame(int value)
+    public bool AddDame(int value)
     {
         hp -= value;
-        if(hp < 0)
+        if (hp < 0)
+        {
             hp = 0;
+            return false;
+        }
+        return true;
     }
     public int GetHp()
     {

@@ -69,6 +69,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7522222651890506928, guid: eb4d8ef032240f145a809345f6b15a18, type: 3}
+      propertyPath: m_Name
+      value: laserRed01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522222651890506928, guid: eb4d8ef032240f145a809345f6b15a18, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
@@ -80,8 +84,33 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.0008094609
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8084258389221439381, guid: eb4d8ef032240f145a809345f6b15a18, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2868034098262493585, guid: eb4d8ef032240f145a809345f6b15a18, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7522222651890506928, guid: eb4d8ef032240f145a809345f6b15a18, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7581011423403148730}
   m_SourcePrefab: {fileID: 100100000, guid: eb4d8ef032240f145a809345f6b15a18, type: 3}
+--- !u!1 &3664409128874237164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7522222651890506928, guid: eb4d8ef032240f145a809345f6b15a18, type: 3}
+  m_PrefabInstance: {fileID: 6538897998001979484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7581011423403148730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664409128874237164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045d5e33616c64f479c4e1c3f15c538c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

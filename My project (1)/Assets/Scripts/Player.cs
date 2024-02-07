@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Dame dame = collision.GetComponent<Dame>();
+        Dame dame = collision.transform.GetComponent<Dame>();
         if(dame != null && dame.IsActive)
         {
             information.AddDame(dame.GetDame());
@@ -60,6 +60,16 @@ public class Player : MonoBehaviour
             {
                 Debug.Log("Die");
             }
+            CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
+            if(cameraShake != null )
+            {
+                cameraShake.Play();
+            }
+            else
+            {
+                Debug.Log("Not find cameraShake");
+            }
+            //Debug.Log(information.GetHp());
             dame.IsActive = false;
             Destroy(collision.gameObject);
         }

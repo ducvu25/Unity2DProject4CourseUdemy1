@@ -36,10 +36,10 @@ public class BulletController : MonoBehaviour
                 bulletSO = transform.GetChild(i).GetComponent<BulletSetting>().GetBulletSO();
                 if(bulletSO != null )
                 {
-                    transform.GetComponent<Dame>().SetDame(bulletSO.Damege);
+                    transform.GetChild(i).GetComponent<Dame>().SetDame(bulletSO.Damege);
                     transform.GetComponent<Rigidbody2D>().velocity = bulletSO.Speed;
                     delaySpawn = bulletSO.TimeSpawn;
-                    Debug.Log(transform.GetComponent<Rigidbody2D>().velocity);
+                    //Debug.Log(transform.GetComponent<Rigidbody2D>().velocity);
                     Destroy(gameObject, bulletSO.TimeALive);
                 }
                 else
