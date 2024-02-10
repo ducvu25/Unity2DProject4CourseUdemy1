@@ -5,8 +5,11 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/HappyNewYear.unity
+    guid: e51fa447294a26c40b28adf9305d6b42
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 91980af1cccbd364b8d717077fb628b1, type: 2}

@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
         heath = GetComponent<Heath>();
     }
     // Start is called before the first frame update
-    void Start()
+/*    void Start()
     {
         
     }
@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         
-    }
+    }*/
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Dame dame = collision.transform.GetComponent<Dame>();
@@ -30,12 +30,12 @@ public class EnemyController : MonoBehaviour
             dame.IsActive = false;
             if (!heath.AddDame(dame.GetDame()))
             {
-                ParticleSystem instace = Instantiate(particleSystem, transform.position, Quaternion.identity);
-                Destroy(instace, instace.main.duration + instace.main.startLifetime.constantMax);
                 Destroy(gameObject);
             }
+            ParticleSystem instace = Instantiate(particleSystem, transform.position, Quaternion.identity);
+            Destroy(instace, instace.main.duration + instace.main.startLifetime.constantMax);
         }
-        if(dame == null)
+        if (dame == null)
         {
             Debug.Log("Not DAME");
         }
