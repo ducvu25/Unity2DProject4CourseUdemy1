@@ -6,6 +6,7 @@ public class EnemisSpawn : MonoBehaviour
 {
     [SerializeField] List<WageConfigSO> wageConfigSOs;
     WageConfigSO wage;
+    public bool continueGame = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,17 +20,21 @@ public class EnemisSpawn : MonoBehaviour
     }
     IEnumerator Spawn()
     {
-        foreach(WageConfigSO wageConfigSO in wageConfigSOs)
+        
+        while (continueGame)
         {
-           wage = wageConfigSO;
-           for(int i = 0; i<wageConfigSO.Number; i++)
+            foreach (WageConfigSO wageConfigSO in wageConfigSOs)
             {
-                Instantiate(wageConfigSO.GoGameObject,
-                            wageConfigSO.PathHeader.position,
-                            Quaternion.identity);
-                yield return new WaitForSeconds(wage.DelaySpawn);
+                wage = wageConfigSO;
+                for (int i = 0; i < wageConfigSO.Number; i++)
+                {
+                    Instantiate(wageConfigSO.GoGameObject,
+                                wageConfigSO.PathHeader.position,
+                                Quaternion.identity);
+                    yield return new WaitForSeconds(wage.DelaySpawn);
+                }
+                yield return new WaitForSeconds(wage.DelayNew);
             }
-            yield return new WaitForSeconds(wage.DelayNew);
         }
     }
     public WageConfigSO GetWage()

@@ -53,6 +53,7 @@ public class Shooter : MonoBehaviour
             {
                 bulletController.SetType(type);
                 delay = bulletController.GetDelaySpawn();
+                Debug.Log(delay);
             }
             else
             {

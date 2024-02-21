@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24423f919e8f51145b1d48925aa51678, type: 3}
-  m_Name: Player_Bullets_Bullet
+  m_Script: {fileID: 11500000, guid: b30842079688f3d438c063793703f3c4, type: 3}
+  m_Name: Speed
   m_EditorClassIdentifier: 
-  timeSpawn: 0.2
-  timeALive: 5
-  dame: 100
-  speed: {x: 0, y: 10}
+  id: E_speed
+  hub: {fileID: 21300000, guid: 0ec1e2d686ec13f41b3746532852be10, type: 3}
+  information: "T\u0103ng t\u1ED1c \u0111\u1ED9 n\u1EA1p \u0111\u1EA1n"
+  effect: 1
+  timeALive: 10

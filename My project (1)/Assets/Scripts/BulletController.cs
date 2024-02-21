@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    float delaySpawn = 0;
+    [SerializeField] float delaySpawn = 0;
     BulletSO bulletSO;
     // Start is called before the first frame update
 /*    void Start()

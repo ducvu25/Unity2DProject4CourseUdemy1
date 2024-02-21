@@ -7,6 +7,7 @@ public class PathFinder : MonoBehaviour
     WageConfigSO wageConfigSO;
     List<Transform> pathTransforms;
     int index;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class PathFinder : MonoBehaviour
         wageConfigSO = FindObjectOfType<EnemisSpawn>().GetWage();
         pathTransforms = wageConfigSO.Paths();
         index = 1;
+        speed = wageConfigSO.Speed;
         transform.position = new Vector2(pathTransforms[0].position.x, pathTransforms[0].position.y);
     }
 
@@ -31,7 +33,7 @@ public class PathFinder : MonoBehaviour
         if(index < pathTransforms.Count)
         {
             Vector3 targetPosition = pathTransforms[index].position;
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, wageConfigSO.Speed*Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed*Time.deltaTime);
             if(transform.position == targetPosition )
             {
                 index++;

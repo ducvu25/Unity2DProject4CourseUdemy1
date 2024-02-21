@@ -10,6 +10,7 @@ public class WageConfigSO : ScriptableObject
     [SerializeField] float speed;
     [SerializeField] float delaySpawn = 0.5f;
     [SerializeField] float delayNew = 1f;
+    [SerializeField] int score = 5;
     public Transform PathHeader
     {
         get { return path.GetChild(0).transform; }
@@ -41,5 +42,9 @@ public class WageConfigSO : ScriptableObject
     }
     public float DelayNew {
         get { return delayNew; }
+    }
+    public int Score
+    {
+        get { return score; }
     }
 }

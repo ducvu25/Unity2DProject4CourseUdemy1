@@ -52,30 +52,33 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Dame dame = collision.transform.GetComponent<Dame>();
-        if(dame != null && dame.IsActive)
+        if (collision.CompareTag("Bullet"))
         {
-            information.AddDame(dame.GetDame());
-            if(information.GetHp() == 0)
+            Dame dame = collision.transform.GetComponent<Dame>();
+            if (dame != null && dame.IsActive)
             {
-                Debug.Log("Die");
-            }
-            CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
-            if(cameraShake != null )
-            {
-                cameraShake.Play();
+                information.AddDame(dame.GetDame());
+                if (information.GetHp() == 0)
+                {
+                    Debug.Log("Die");
+                }
+                CameraShake cameraShake = Camera.main.GetComponent<CameraShake>();
+                if (cameraShake != null)
+                {
+                    cameraShake.Play();
+                }
+                else
+                {
+                    Debug.Log("Not find cameraShake");
+                }
+                //Debug.Log(information.GetHp());
+                dame.IsActive = false;
+                Destroy(collision.gameObject);
             }
             else
             {
-                Debug.Log("Not find cameraShake");
+                Debug.Log("Not find Dame");
             }
-            //Debug.Log(information.GetHp());
-            dame.IsActive = false;
-            Destroy(collision.gameObject);
-        }
-        else
-        {
-            Debug.Log("Not find Dame");
         }
     }
 }
